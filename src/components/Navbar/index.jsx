@@ -12,10 +12,12 @@ const Navbar = () => {
 
   return (
     <nav className={styles.nav}>
-      <div className={styles.navIconWrapper}>
-        <img className={styles.navIcon} src={newsIcon} alt="navbar icon" />
-        <h1 className={styles.navTitle}>NEWS</h1>
-      </div>
+      <Link onClick={() => setSelected("")} to="/" className={styles.navHead}>
+        <div className={styles.navIconWrapper}>
+          <img className={styles.navIcon} src={newsIcon} alt="navbar icon" />
+          <h1 className={styles.navTitle}>NEWS UPDATE</h1>
+        </div>
+      </Link>
 
       <div className={styles.categories}>
         {CATEGORIES.map((category, index) => (
